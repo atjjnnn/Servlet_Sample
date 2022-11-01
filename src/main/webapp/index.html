@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html"; charset="UTF-8">
+<title>Hello</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("button").click(function() {
+		$.get("/hello", function(data) {
+			$("div").text(data);
+		});
+	});
+});
+</script>
+</head>
+<body>
+<button>Submit</button>
+<div></div>
+</body>
+</html>
